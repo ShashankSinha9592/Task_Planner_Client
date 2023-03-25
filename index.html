@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Planner</title>
+    <link rel="stylesheet" href="../CSS/style.css" />
+    <script src="../Javascript/index.js" defer></script>
+  </head>
+  <body>
+    <nav>
+      <div><img src="../Images/Logo.png" alt="" /></div>
+      <div id="navLogin">
+        <h3>HOME</h3>
+        <a href="./loginSignup.html" id="login">Login/SignUp</a>
+      </div>
+    </nav>
+
+    <section>
+      <div id="leftHand">
+        <h3>Filter</h3>
+        <label for="Priority">Priority</label>
+        <select name="Prioroty" id="priority">
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+        </select>
+        <br />
+        <br />
+
+        <label for="TaskType">Type</label>
+        <select name="Type" id="priority">
+          <option value="BUG">Bug</option>
+          <option value="FEATURE">Feature</option>
+          <option value="STORY">Story</option>
+        </select>
+
+        <br />
+        <br />
+
+        <label for="Status">Status</label>
+        <select name="Status" id="status">
+          <option value="PENDING">Pending</option>
+          <option value="COMPLETED">Completed</option>
+          <option value="FAILED">Failed</option>
+        </select>
+
+        <br />
+        <br />
+        <!-- <label for="High">High</label>
+        <input type="radio" name="High" value="HIGH" /><br />
+        <label for="Low">Low</label>
+        <input type="radio" name="Low" value="LOW" /><br />
+        <label for="Medium">Medium</label>
+        <input type="radio" name="Medium" value="MEDIUM" /> -->
+        <br />
+        <label for="Sort">Sort By Priority</label>
+        <select name="Sort" id="sortByPriority">
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+        </select>
+        <label for="Ascending">Ascending</label>
+        <input type="radio" value="ASC" />
+        <label for="Descending">Descending</label>
+        <input type="radio" value="DESC" />
+        <br />
+        <br />
+        <label for="Sort">Sort By Field</label>
+        <select name="Sort" id="sortByField">
+          <option value="LOW">Low</option>
+          <option value="MEDIUM">Medium</option>
+          <option value="HIGH">High</option>
+        </select>
+        <label for="Ascending">Ascending</label>
+        <input type="radio" value="ASC" />
+        <label for="Descending">Descending</label>
+        <input type="radio" value="DESC" />
+      </div>
+
+      <div id="rightHand">
+        <h2>Sprint</h2>
+
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Summary</th>
+              <th>Priority</th>
+              <th>Status</th>
+              <th>Delete</th>
+            </tr>
+          </thead>
+          <tbody>
+            <!-- <tr>
+              <td>BUG</td>
+              <td>
+                To slove a bug which is creating problem in fetching details fro
+                sprint
+              </td>
+              <td>HIGH</td>
+              <td>PENDING</td>
+              <td>Remove</td>
+            </tr> -->
+          </tbody>
+        </table>
+      </div>
+    </section>
+  </body>
+</html>
