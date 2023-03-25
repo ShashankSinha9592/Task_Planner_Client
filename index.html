@@ -9,15 +9,24 @@
     <script src="./Javascript/index.js" defer></script>
   </head>
   <body>
+    <video autoplay muted loop id="myVideo">
+      <source
+        src="https://thumbs.gfycat.com/ObeseShamefulAnhinga-mobile.mp4"
+        type="video/mp4"
+      />
+    </video>
     <nav>
-      <div><img src="../Images/Logo.png" alt="" /></div>
-      <div id="navLogin">
+      <div id="navLeftSide">
+        <img src="./Images/Logo.png" alt="" />
         <h3>HOME</h3>
-        <a href="./loginSignup.html" id="login">Login/SignUp</a>
+      </div>
+      <div id="navRightSide">
+        <h3>Add Sprint</h3>
+        <h3>Add Task</h3>
+        <a href="./HTML/loginSignup.html" id="login">Login/SignUp</a>
       </div>
     </nav>
-
-    <section>
+    <section id="absolute">
       <div id="leftHand">
         <h3>Filter</h3>
         <label for="Priority">Priority</label>
@@ -47,65 +56,28 @@
         </select>
 
         <br />
+
         <br />
-        <!-- <label for="High">High</label>
-        <input type="radio" name="High" value="HIGH" /><br />
-        <label for="Low">Low</label>
-        <input type="radio" name="Low" value="LOW" /><br />
-        <label for="Medium">Medium</label>
-        <input type="radio" name="Medium" value="MEDIUM" /> -->
+
         <br />
-        <label for="Sort">Sort By Priority</label>
-        <select name="Sort" id="sortByPriority">
-          <option value="LOW">Low</option>
-          <option value="MEDIUM">Medium</option>
-          <option value="HIGH">High</option>
-        </select>
-        <label for="Ascending">Ascending</label>
-        <input type="radio" value="ASC" />
-        <label for="Descending">Descending</label>
-        <input type="radio" value="DESC" />
+
         <br />
-        <br />
+
         <label for="Sort">Sort By Field</label>
         <select name="Sort" id="sortByField">
-          <option value="LOW">Low</option>
-          <option value="MEDIUM">Medium</option>
-          <option value="HIGH">High</option>
-        </select>
+          <option value="default">Options</option>
+          <option value="taskType">Task Type</option>
+          <option value="taskStatus">Tast Status</option>
+          <option value="priority">Priority</option></select
+        ><br /><br />
+
         <label for="Ascending">Ascending</label>
-        <input type="radio" value="ASC" />
+        <input type="radio" value="ASC" name="sort" />
         <label for="Descending">Descending</label>
-        <input type="radio" value="DESC" />
+        <input type="radio" value="DESC" name="sort" />
       </div>
 
-      <div id="rightHand">
-        <h2>Sprint</h2>
-
-        <table>
-          <thead>
-            <tr>
-              <th>Type</th>
-              <th>Summary</th>
-              <th>Priority</th>
-              <th>Status</th>
-              <th>Delete</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- <tr>
-              <td>BUG</td>
-              <td>
-                To slove a bug which is creating problem in fetching details fro
-                sprint
-              </td>
-              <td>HIGH</td>
-              <td>PENDING</td>
-              <td>Remove</td>
-            </tr> -->
-          </tbody>
-        </table>
-      </div>
+      <div class="gallery"></div>
     </section>
   </body>
 </html>

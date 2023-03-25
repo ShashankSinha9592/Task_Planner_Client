@@ -5,58 +5,145 @@
     padding: 0;
 }
 
+
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    background-repeat: no-repeat;
+  }
 nav{
+    position: sticky;
     display: flex;
     justify-content: space-around;
     text-align: center;
     align-items: center;
-    padding: 10px;
-    border: 2px solid red;
+    padding: 5px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    margin-bottom: 20px;
+}
+a{
+    text-decoration: none;
+    color: black;
 }
 
 nav img{
     width: 60px;
+    margin: 0 30px;
     
 }
 
-#navLogin{
-    display: flex;
-    width: 80%;
-    justify-content: flex-end;
-    border: 2px solid green;
+nav h3{
+    cursor: pointer;
 }
 
-#navLogin h3{
+nav h3:hover,a:hover{
+    color: teal;
+}
+
+#navLeftSide{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 30%;
+}
+
+#navRightSide{
+    display: flex;
+    width: 50%;
+    justify-content: flex-end;
+    
+}
+
+#navRightSide h3{
     margin-right: 50px;
+    cursor: pointer;
 }
 
 section{
     display: flex;
+    gap: 20px;
     width: 100%;
-    border: 2px solid blue;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     text-align: center;
     padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: rgba(0, 0, 0, 0.144);
 }
 
-#rightHand{
+.gallery {
+	padding: 2rem;
+	display: grid;
+	grid-template-columns: repeat(10, 80vw);
+	grid-template-rows: 1fr;
+	grid-column-gap: 1rem;
+	grid-row-gap: 1rem;
+	overflow: scroll;
+    /* scroll-snap-stop: normal; */
+	height: 100%;
+	scroll-snap-type:both mandatory;   
+    /* both mandatory */
+	scroll-padding: 1rem;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+
+.active {
+	scroll-snap-type:all;
+}
+
+table {
+	scroll-snap-align: center;
+    scroll-behavior: smooth;
+    scroll-snap-stop: mandatory;
+	border-radius: 3px;
+    border: 2px solid rgba(0, 0, 0, 0.688);
+    width: 80%;
+    height: fit-content;
+    margin: 40px auto;
+}
+
+video{
+    position: relative;
+    width: 100vw;
+    height: 50px;
+}
+
+/* #rightHand{
     height: 50vh;
     width: 70%;
     text-align: center;
     border: 2px solid blue;
-}
+} */
 
 #leftHand{
     width: 30%;
-    border: 2px solid green;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    padding: 30px;
 }
 
-table{
+/* table{
     border: 2px solid black;
     width: 80%;
     margin: 30px auto;
-}
+} */
 
 table tr , table td , table th{
-    border: 1px solid pink;
+    border: 1px solid rgba(26, 10, 13, 0.271);
     padding: 5px;
+}
+
+
+.sprintName{
+    position: relative;
+    top: 0%;
+    left: 100%;
 }

@@ -68,7 +68,7 @@ class User {
         this.email = email;
         this.password = password;
 
-        let url = `http://localhost:8080/taskscheduler/user`;
+        let url = `https://taskplanner-production-b2a1.up.railway.app/taskscheduler/user`;
         let res = await fetch(url, {
           method: "POST",
           body: JSON.stringify(this),
@@ -89,19 +89,6 @@ class User {
   }
 
   async #Authenticate(token) {
-    // let url = `https://masai-api-mocker.herokuapp.com/user/${username}`;
-    // try {
-    //   let res = await fetch(url, {
-    //     headers: {
-    //       Authorization: `Bearer ${token}`,
-    //     },
-    //   });
-    //   localStorage.setItem("name", JSON.stringify(username[0]));
-    //   location.href = "./index.html";
-    // } catch (err) {
-    //   alert("Invalid Credentials");
-    // }
-
     localStorage.setItem("token", token);
 
     location.href = "../index.html";
@@ -112,7 +99,7 @@ class User {
       password,
     };
     try {
-      let url = `http://localhost:8080/taskscheduler/login`;
+      let url = `https://taskplanner-production-b2a1.up.railway.app/taskscheduler/login`;
 
       let res = await fetch(url, {
         method: "POST",
@@ -122,7 +109,7 @@ class User {
         },
       });
       let data = await res.json();
-      console.log(data);
+
       if (data.message == undefined) {
         this.#Authenticate(data.token);
       } else {
@@ -130,21 +117,6 @@ class User {
       }
     } catch (err) {
       alert("Invalid Credentials");
-    }
-  }
-
-  async logout(token) {
-    let url = `http://localhost:8080/taskscheduler/login`;
-
-    try {
-      let res = await fetch(url, {
-        method: "GET",
-        headers: {
-          Token: token,
-        },
-      });
-    } catch (err) {
-      alert(err);
     }
   }
 }
